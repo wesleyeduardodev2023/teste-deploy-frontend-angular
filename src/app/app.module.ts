@@ -9,6 +9,7 @@ import {HomeComponent} from './components/home/home.component';
 import {HeaderComponent} from './components/header/header.component';
 import {TecnicoListComponent} from './components/tecnico/tecnico-list/tecnico-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatSortModule} from "@angular/material/sort";
@@ -62,7 +63,12 @@ const materialModules = [
     AppRoutingModule,
     ...materialModules,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
