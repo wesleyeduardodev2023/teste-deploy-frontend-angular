@@ -8,6 +8,7 @@ import {NavComponent} from './components/nav/nav.component';
 import {HomeComponent} from './components/home/home.component';
 import {HeaderComponent} from './components/header/header.component';
 import {TecnicoListComponent} from './components/tecnico/tecnico-list/tecnico-list.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatSortModule} from "@angular/material/sort";
@@ -25,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './components/login/login.component';
 
 const materialModules = [
   MatTooltipModule,
@@ -45,20 +47,22 @@ const materialModules = [
   MatCardModule
 ];
 
-
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    TecnicoListComponent
+    TecnicoListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ...materialModules
+    ...materialModules,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
