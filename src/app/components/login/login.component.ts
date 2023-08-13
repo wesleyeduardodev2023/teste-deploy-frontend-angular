@@ -29,7 +29,9 @@ export class LoginComponent implements OnInit {
 
   logar() {
     this.service.authenticate(this.creds).subscribe(resposta => {
+      let token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAbWFpbC5jb20iLCJleHAiOjE2OTI1MjU2NzN9.OJabkEXXXXHZREJO9QkI0jzKJbp7kAv1EQsYbqfxELXPlWw-ddvqSkkBEehT6Pn0g2IsUgdfv_TIAXFdBKwXDw';
       //this.service.successfulLogin(resposta.headers.get('Authorization').substring(7));
+      this.service.successfulLogin(token);
       this.router.navigate([''])
     }, () => {
       this.toast.error('Usuário e/ou senha inválidos');
