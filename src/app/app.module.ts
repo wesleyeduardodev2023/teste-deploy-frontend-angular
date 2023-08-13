@@ -10,7 +10,6 @@ import {HeaderComponent} from './components/header/header.component';
 import {TecnicoListComponent} from './components/tecnico/tecnico-list/tecnico-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
 
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatSortModule} from "@angular/material/sort";
@@ -46,8 +45,7 @@ const materialModules = [
   MatInputModule,
   MatIconModule,
   MatListModule,
-  MatCardModule,
-  HttpClientModule
+  MatCardModule
 ];
 
 @NgModule({
